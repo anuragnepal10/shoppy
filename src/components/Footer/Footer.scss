@@ -1,0 +1,27 @@
+@use '/src/common/color.scss' as clr;
+
+footer {
+	padding: 1.5rem 0;
+	background-color: clr.$primary;
+	color: clr.$neutral-inverted;
+
+	.wrapper {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+
+		nav {
+			display: flex;
+			gap: 1rem;
+
+			.link {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
