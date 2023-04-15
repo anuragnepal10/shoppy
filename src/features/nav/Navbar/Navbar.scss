@@ -1,0 +1,24 @@
+@use '/src/common/template.scss' as tem;
+@use '/src/common/color.scss' as clr;
+
+nav {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	.link {
+		letter-spacing: 2px;
+		color: clr.$neutral-balance;
+		display: grid;
+		place-content: center;
+		padding-inline: 2rem;
+		height: 100%;
+		border-left: tem.$border;
+
+		&:hover {
+			background-color: clr.$balance;
+		}
+	}
+	&:last-child {
+		border-right: tem.$border;
+	}
+}

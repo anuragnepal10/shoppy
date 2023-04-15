@@ -11,3 +11,8 @@
 main {
 	flex-grow: 1;
 }
+
+.wrapper {
+	width: min(1200px, 90%);
+	margin-inline: auto;
+}

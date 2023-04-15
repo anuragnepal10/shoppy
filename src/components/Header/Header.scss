@@ -1,0 +1,31 @@
+@use '/src/common/color.scss' as clr;
+@use '/src/common/template.scss' as tem;
+
+header {
+	height: 75px;
+	border-bottom: tem.$border;
+	.wrapper {
+		width: min(1200px, 100%);
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.logo-container {
+			padding-inline: 2rem;
+			display: grid;
+			place-content: center;
+			border-left: tem.$border;
+			border-right: tem.$border;
+			height: 100%;
+
+			&:hover {
+				background-color: clr.$balance;
+			}
+
+			.logo {
+				height: 50px;
+			}
+		}
+	}
+}
