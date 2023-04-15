@@ -21,4 +21,8 @@ header nav {
 	&:last-child {
 		border-right: tem.$border;
 	}
+
+	.link.active {
+		color: clr.$primary;
+	}
 }

@@ -1,22 +1,23 @@
 import React from 'react'
 import './Footer.scss'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
 	return (
 		<footer>
 			<div className="wrapper">
 				<nav>
-					<a href="" className="link">
+					<Link to="/" className="link">
 						Home
-					</a>
+					</Link>
 					<span>&#x2022;</span>
-					<a href="" className="link">
+					<Link to="/cart" className="link">
 						Cart
-					</a>
+					</Link>
 					<span>&#x2022;</span>
-					<a href="" className="link">
+					<Link to="/about" className="link">
 						About
-					</a>
+					</Link>
 				</nav>
 				<p className="copyright">Anurag Nepal &copy; 2023</p>
 			</div>
