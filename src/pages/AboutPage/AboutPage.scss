@@ -1,0 +1,13 @@
+@use '/src/common/color.scss' as clr;
+
+.about-text {
+	margin-bottom: 1rem;
+}
+
+.about-link {
+	color: clr.$primary;
+}
+
+.about-link:hover {
+	text-decoration: underline;
+}
