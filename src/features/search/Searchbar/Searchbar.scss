@@ -1,0 +1,39 @@
+@use '/src/common/template.scss' as tem;
+@use '/src/common/color.scss' as clr;
+
+.search-bar {
+	display: flex;
+	height: 3.5rem;
+	.search-icon-holder {
+		width: 3.5rem;
+		display: grid;
+		place-content: center;
+		border: tem.$border;
+		color: clr.$neutral-balance;
+		transition: tem.$transition;
+		transition-property: border-color;
+	}
+	.search-bar-input {
+		flex-grow: 1;
+		border: tem.$border;
+		border-left: none;
+		padding: 0 1rem;
+		transition: tem.$transition;
+		transition-property: border-color;
+
+		&::placeholder {
+			color: clr.$neutral-balance;
+		}
+	}
+}
+
+.search-bar.active {
+	.search-bar-input {
+		border-color: clr.$primary;
+	}
+
+	.search-icon-holder {
+		border-color: clr.$primary;
+		// color: clr.$primary;
+	}
+}
