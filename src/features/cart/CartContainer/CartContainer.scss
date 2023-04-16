@@ -1,0 +1,36 @@
+@use '/src/common/color.scss' as clr;
+@use '/src/common/template.scss' as tem;
+
+.cart-card-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	.total-price {
+		color: clr.$neutral-balance;
+		text-align: right;
+	}
+
+	tbody,
+	tbody td {
+		border: tem.$border;
+	}
+
+	table {
+		border-collapse: collapse;
+
+		td {
+			padding: 1rem;
+		}
+
+		td.extend {
+			width: 7rem;
+		}
+	}
+
+	thead {
+		border: none;
+		background-color: clr.$secondary;
+		color: clr.$neutral-inverted;
+		font-weight: bold;
+	}
+}

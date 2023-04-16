@@ -1,0 +1,57 @@
+@use '/src/common/color.scss' as clr;
+
+.cart-card {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	.cart-card-image-container {
+		background-color: red;
+		flex-shrink: 0;
+		width: 200px;
+		height: 200px;
+	}
+	.cart-card-info-container {
+		display: flex;
+		flex-direction: column;
+
+		.cart-card-price {
+			display: flex;
+			gap: 0.25rem;
+			font-weight: bold;
+			font-size: 2rem;
+
+			span {
+				font-size: 1.5rem;
+				font-weight: lighter;
+			}
+		}
+		.cart-card-rating {
+			display: flex;
+			align-items: flex-end;
+			gap: 0.5rem;
+
+			.rating {
+				font-size: 1.25rem;
+
+				display: flex;
+				align-items: center;
+				gap: 0.25rem;
+				.star-icon {
+					color: clr.$yellow;
+				}
+			}
+
+			.reviews {
+				color: clr.$neutral-balance;
+			}
+		}
+
+		.remove-link {
+			color: clr.$primary;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

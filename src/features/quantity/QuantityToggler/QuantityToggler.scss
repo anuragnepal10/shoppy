@@ -1,0 +1,40 @@
+@use '/src/common/template.scss' as tem;
+@use '/src/common/color.scss' as clr;
+
+.quantity-toggler {
+	height: 2.5rem;
+	display: flex;
+	border: tem.$border;
+	color: clr.$neutral-balance;
+	.btn {
+		color: inherit;
+		display: grid;
+		place-content: center;
+		font-size: 1.75rem;
+		width: 2.5rem;
+		border: none;
+		background-color: clr.$neutral-inverted;
+	}
+
+	.btn.disabled {
+		cursor: not-allowed;
+	}
+	input {
+		color: inherit;
+		text-align: center;
+		width: 2.5rem;
+		border: none;
+		border-left: tem.$border;
+		border-right: tem.$border;
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		&[type='number'] {
+			-moz-appearance: textfield;
+		}
+	}
+}

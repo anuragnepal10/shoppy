@@ -53,7 +53,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
 	color: clr.$secondary;
 }
 
@@ -73,7 +74,7 @@ h1 {
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: clr.$primary;
+	background-color: clr.$neutral-balance;
 }
 
 /* fixed position for the scrollbar */
