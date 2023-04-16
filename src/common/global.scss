@@ -52,11 +52,34 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
 	color: clr.$secondary;
 }
 
 h1 {
 	font-size: 2rem;
 	margin-bottom: 1rem;
+}
+
+// Scroll bar
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: clr.$balance;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: clr.$primary;
+}
+
+/* fixed position for the scrollbar */
+::-webkit-scrollbar {
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100vh;
 }

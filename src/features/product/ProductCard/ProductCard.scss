@@ -1,0 +1,58 @@
+@use '/src/common/template.scss' as tem;
+@use '/src/common/color.scss' as clr;
+
+.product-card {
+	border: tem.$border;
+	display: flex;
+	flex-direction: column;
+	width: 250px;
+
+	.product-card-image-container {
+		border-bottom: tem.$border;
+		width: 100%;
+		height: 250px;
+	}
+
+	.product-card-info-container {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 1rem;
+		gap: 1rem;
+
+		.product-card-title {
+			height: 60px;
+			overflow: hidden;
+		}
+
+		div {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.product-card-price {
+				display: flex;
+				gap: 0.25rem;
+				font-weight: bold;
+				font-size: 1.5rem;
+
+				span {
+					font-size: 1.25rem;
+					font-weight: lighter;
+				}
+			}
+
+			.product-card-rating {
+				font-size: 1.125rem;
+				display: flex;
+				align-items: center;
+				gap: 0.25rem;
+
+				.star-icon {
+					color: clr.$yellow;
+				}
+			}
+		}
+	}
+}

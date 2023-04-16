@@ -1,12 +1,19 @@
+@use '/src/common/template.scss' as tem;
+
 #root {
 	height: 100%;
+}
+
+body {
+	overflow-y: scroll;
 }
 
 .App {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 3rem;
+	overflow: visible;
 }
 
 main {
@@ -15,6 +22,6 @@ main {
 
 .wrapper {
 	height: 100%;
-	width: min(1200px, 90%);
+	width: min(tem.$container-width, 90%);
 	margin-inline: auto;
 }

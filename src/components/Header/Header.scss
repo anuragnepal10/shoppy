@@ -2,13 +2,15 @@
 @use '/src/common/template.scss' as tem;
 
 header {
+	background-color: clr.$neutral-inverted;
 	height: 75px;
 	border-bottom: tem.$border;
 	.wrapper {
-		width: min(1200px, 100%);
+		width: min(tem.$container-width, 100%);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		height: 75px;
 
 		.logo-container {
 			padding-inline: 2rem;
