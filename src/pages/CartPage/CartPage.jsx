@@ -1,12 +1,9 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { toggle } from '../../features/nav/navSlice'
+import React from 'react'
+import { useNavbar } from '../../hooks/useNavbar'
 
 const CartPage = () => {
-	const dispatch = useDispatch()
-	useEffect(() => {
-		dispatch(toggle('cart'))
-	}, [])
+	useNavbar('cart')
+
 	return <div>CartPage</div>
 }
 

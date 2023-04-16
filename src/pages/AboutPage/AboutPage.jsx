@@ -1,12 +1,8 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { toggle } from '../../features/nav/navSlice'
+import React from 'react'
+import { useNavbar } from '../../hooks/useNavbar'
 
 const AboutPage = () => {
-	const dispatch = useDispatch()
-	useEffect(() => {
-		dispatch(toggle('about'))
-	}, [])
+	useNavbar('about')
 	return <div>AboutPage</div>
 }
 
