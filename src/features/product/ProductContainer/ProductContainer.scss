@@ -1,6 +1,21 @@
+@use '/src/common/breakpoint.scss' as b;
+
 .product-container {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2rem;
+
+	@media (max-width: b.$tablet-large) {
+		gap: 1.5rem;
+	}
+	@media (max-width: b.$tablet) {
+		justify-content: center;
+	}
+	@media (max-width: b.$tablet-mini) {
+		gap: 1rem;
+	}
+	@media (max-width: b.$phone) {
+		gap: 1rem;
+	}
 }

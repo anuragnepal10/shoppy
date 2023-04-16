@@ -1,4 +1,5 @@
 @use 'color' as clr;
+@use '/src/common/breakpoint.scss' as b;
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
@@ -61,6 +62,9 @@ h4 {
 h1 {
 	font-size: 2rem;
 	margin-bottom: 1rem;
+	@media (max-width: b.$tablet-mini) {
+		font-size: 1.5rem;
+	}
 }
 
 // Scroll bar

@@ -1,5 +1,6 @@
 @use '/src/common/template.scss' as tem;
 @use '/src/common/color.scss' as clr;
+@use '/src/common/breakpoint.scss' as b;
 
 .search-bar {
 	display: flex;
@@ -35,6 +36,27 @@
 
 	.search-icon-holder {
 		border-color: clr.$primary;
-		// color: clr.$primary;
+	}
+}
+
+@media (max-width: b.$tablet-large) {
+	.search-bar {
+		width: 573px;
+		justify-content: center;
+	}
+}
+
+@media (max-width: b.$tablet) {
+	.search-bar {
+		width: 100%;
+	}
+}
+@media (max-width: b.$phone) {
+	.search-bar {
+		height: 2.5rem;
+		.search-icon-holder {
+			width: 2.5rem;
+			font-size: 0.75rem;
+		}
 	}
 }
