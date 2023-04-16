@@ -3,7 +3,7 @@ import { useNavbar } from '../../hooks/useNavbar'
 import CartContainer from '../../features/cart/CartContainer/CartContainer'
 
 const CartPage = () => {
-	useNavbar('cart')
+	useNavbar('Cart')
 
 	return (
 		<div className="wrapper">

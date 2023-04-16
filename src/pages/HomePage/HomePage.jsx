@@ -4,7 +4,7 @@ import Searchbar from '../../features/search/Searchbar/Searchbar'
 import ProductContainer from '../../features/product/ProductContainer/ProductContainer'
 
 const HomePage = () => {
-	useNavbar('home')
+	useNavbar('Home')
 
 	return (
 		<div className="wrapper">

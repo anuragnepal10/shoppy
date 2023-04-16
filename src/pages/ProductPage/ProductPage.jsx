@@ -3,7 +3,7 @@ import { useNavbar } from '../../hooks/useNavbar'
 import ProductDetailContainer from '../../features/product/ProductDetailContainer/ProductDetailContainer'
 
 const ProductPage = () => {
-	useNavbar('product')
+	useNavbar('Product')
 
 	return (
 		<div className="wrapper">

@@ -3,7 +3,7 @@ import './AboutPage.scss'
 import { useNavbar } from '../../hooks/useNavbar'
 
 const AboutPage = () => {
-	useNavbar('about')
+	useNavbar('About')
 	return (
 		<div className="wrapper">
 			<h1 className="page-title">About</h1>

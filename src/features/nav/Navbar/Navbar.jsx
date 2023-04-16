@@ -16,13 +16,13 @@ const Navbar = () => {
 
 	return (
 		<nav>
-			<Link to="/" className={`link ${navClassFinder('home')}`}>
+			<Link to="/" className={`link ${navClassFinder('Home')}`}>
 				Home
 			</Link>
-			<Link to="/cart" className={`link ${navClassFinder('cart')}`}>
+			<Link to="/cart" className={`link ${navClassFinder('Cart')}`}>
 				Cart
 			</Link>
-			<Link to="/about" className={`link ${navClassFinder('about')}`}>
+			<Link to="/about" className={`link ${navClassFinder('About')}`}>
 				About
 			</Link>
 		</nav>

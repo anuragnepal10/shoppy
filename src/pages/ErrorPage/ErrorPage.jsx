@@ -3,7 +3,7 @@ import { useNavbar } from '../../hooks/useNavbar'
 import ErrorMessage from './ErrorMessage'
 
 const ErrorPage = () => {
-	useNavbar('error')
+	useNavbar('Error')
 	return <ErrorMessage />
 }
 
