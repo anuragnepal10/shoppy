@@ -4,3 +4,10 @@ $tablet-large: 1540px;
 $tablet: 1100px;
 $tablet-mini: 800px;
 $phone: 500px;
+
+:export {
+	tabletLarge: $tablet-large;
+	tablet: $tablet;
+	tabletMini: $tablet-mini;
+	phone: $phone;
+}
