@@ -41,13 +41,19 @@
 		background-color: clr.$secondary;
 		color: clr.$neutral-inverted;
 		font-weight: bold;
-		font-size: 0.75rem;
+
+		@media (max-width: b.$tablet-mini) {
+			width: 5rem;
+			font-size: 0.75rem;
+		}
 	}
 
 	tbody {
 		tr {
 			&:last-child {
-				font-size: 0.75rem;
+				@media (max-width: b.$tablet-mini) {
+					font-size: 0.75rem;
+				}
 			}
 		}
 	}
