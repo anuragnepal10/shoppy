@@ -6,6 +6,8 @@
 	display: flex;
 	border: tem.$border;
 	color: clr.$neutral-balance;
+	width: fit-content;
+
 	.btn {
 		color: inherit;
 		display: grid;
