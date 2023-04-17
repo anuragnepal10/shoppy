@@ -8,7 +8,7 @@ const Header = () => {
 		<header>
 			<div className="wrapper">
 				<Link to="/" className="logo-container">
-					<img src="/src/assets/shoppy-logo.png" alt="" className="logo" />
+					<img src="assets/shoppy-logo.png" alt="" className="logo" />
 				</Link>
 				<Navbar />
 			</div>
