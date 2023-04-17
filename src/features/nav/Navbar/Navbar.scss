@@ -1,10 +1,17 @@
 @use '/src/common/template.scss' as tem;
 @use '/src/common/color.scss' as clr;
+@use '/src/common/breakpoint.scss' as b;
 
 header nav {
 	height: 100%;
 	display: flex;
 	align-items: center;
+	@media (max-width: b.$phone) {
+		border-top: tem.$border;
+		width: 100%;
+		justify-content: center;
+	}
+
 	.link {
 		letter-spacing: 2px;
 		color: clr.$neutral-balance;
@@ -13,6 +20,13 @@ header nav {
 		padding-inline: 2rem;
 		height: 100%;
 		border-left: tem.$border;
+		@media (max-width: b.$tablet-mini) {
+			font-size: 0.875rem;
+		}
+		@media (max-width: b.$phone) {
+			flex-grow: 1;
+			padding-inline: 0;
+		}
 
 		&:hover {
 			background-color: clr.$balance;
@@ -20,6 +34,11 @@ header nav {
 	}
 	&:last-child {
 		border-right: tem.$border;
+	}
+	@media (max-width: b.$phone) {
+		.link:first-child {
+			border: none;
+		}
 	}
 
 	.link.active {

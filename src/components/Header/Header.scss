@@ -1,16 +1,32 @@
 @use '/src/common/color.scss' as clr;
 @use '/src/common/template.scss' as tem;
+@use '/src/common/breakpoint.scss' as b;
 
 header {
 	background-color: clr.$neutral-inverted;
 	height: 75px;
 	border-bottom: tem.$border;
+
+	@media (max-width: b.$tablet-mini) {
+		height: 50px;
+	}
+	@media (max-width: b.$phone) {
+		height: 100px;
+	}
 	.wrapper {
 		width: min(tem.$container-width, 100%);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		height: 75px;
+		@media (max-width: b.$tablet-mini) {
+			height: 50px;
+		}
+
+		@media (max-width: b.$phone) {
+			flex-direction: column;
+			height: 100px;
+		}
 
 		.logo-container {
 			padding-inline: 2rem;
@@ -19,6 +35,9 @@ header {
 			border-left: tem.$border;
 			border-right: tem.$border;
 			height: 100%;
+			@media (max-width: b.$tablet-mini) {
+				border: none;
+			}
 
 			&:hover {
 				background-color: clr.$balance;
@@ -26,6 +45,9 @@ header {
 
 			.logo {
 				height: 50px;
+				@media (max-width: b.$tablet-mini) {
+					height: 30px;
+				}
 			}
 		}
 	}

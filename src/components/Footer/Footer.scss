@@ -1,9 +1,14 @@
 @use '/src/common/color.scss' as clr;
+@use '/src/common/breakpoint.scss' as b;
 
 footer {
 	padding: 1.5rem 0;
 	background-color: clr.$primary;
 	color: clr.$neutral-inverted;
+
+	@media (max-width: b.$phone) {
+		font-size: 0.75rem;
+	}
 
 	.wrapper {
 		height: 100%;
