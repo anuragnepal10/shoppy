@@ -1,18 +1,43 @@
 @use '/src/common/color.scss' as clr;
+@use '/src/common/breakpoint.scss' as b;
 
 .cart-card {
 	display: flex;
 	flex-direction: row;
 	gap: 1rem;
+
+	@media (max-width: b.$tablet-mini) {
+		flex-direction: column;
+	}
+
 	.cart-card-image-container {
 		background-color: red;
 		flex-shrink: 0;
 		width: 200px;
 		height: 200px;
+
+		@media (max-width: b.$tablet) {
+			width: 150px;
+			height: 150px;
+		}
+		@media (max-width: b.$tablet-mini) {
+			width: 125px;
+			height: 125px;
+		}
+		@media (max-width: b.$phone) {
+			width: 100px;
+			height: 100px;
+		}
 	}
 	.cart-card-info-container {
 		display: flex;
 		flex-direction: column;
+
+		.cart-card-title {
+			@media (max-width: b.$phone) {
+				font-size: 0.875rem;
+			}
+		}
 
 		.cart-card-price {
 			display: flex;
@@ -20,15 +45,26 @@
 			font-weight: bold;
 			font-size: 2rem;
 
+			@media (max-width: b.$phone) {
+				font-size: 1.25rem;
+			}
+
 			span {
 				font-size: 1.5rem;
 				font-weight: lighter;
+
+				@media (max-width: b.$phone) {
+					font-size: 1rem;
+				}
 			}
 		}
 		.cart-card-rating {
 			display: flex;
 			align-items: flex-end;
 			gap: 0.5rem;
+			@media (max-width: b.$phone) {
+				display: none;
+			}
 
 			.rating {
 				font-size: 1.25rem;
