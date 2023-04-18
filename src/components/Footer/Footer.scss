@@ -23,8 +23,11 @@ footer {
 			gap: 1rem;
 
 			.link {
-				&:hover {
-					text-decoration: underline;
+				&:hover,
+				&:focus {
+					@media (hover: hover) {
+						text-decoration: underline;
+					}
 				}
 			}
 		}

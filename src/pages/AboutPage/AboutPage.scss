@@ -6,8 +6,11 @@
 
 .about-link {
 	color: clr.$primary;
-}
 
-.about-link:hover {
-	text-decoration: underline;
+	&:hover,
+	&:focus {
+		@media (hover: hover) {
+			text-decoration: underline;
+		}
+	}
 }

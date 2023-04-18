@@ -29,7 +29,9 @@ header nav {
 		}
 
 		&:hover {
-			background-color: clr.$balance;
+			@media (hover: hover) {
+				background-color: clr.$balance;
+			}
 		}
 	}
 	&:last-child {

@@ -39,8 +39,11 @@ header {
 				border: none;
 			}
 
-			&:hover {
-				background-color: clr.$balance;
+			&:hover,
+			&:focus {
+				@media (hover: hover) {
+					background-color: clr.$balance;
+				}
 			}
 
 			.logo {

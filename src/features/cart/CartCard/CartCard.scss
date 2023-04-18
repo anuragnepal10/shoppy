@@ -85,8 +85,11 @@
 		.remove-link {
 			color: clr.$primary;
 
-			&:hover {
-				text-decoration: underline;
+			&:hover,
+			&:focus {
+				@media (hover: hover) {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
