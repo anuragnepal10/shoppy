@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import './ProductCard.scss'
 import { FaStar } from 'react-icons/fa'
-import { useTruncatedTitle } from '../../../hooks/useTruncatedTitle'
-
 const ProductCard = ({ product }) => {
 	const { title, price, image, rating } = product
 	const breakpoint = 1540
-	const truncatedTitle = useTruncatedTitle(title, 35, 20, breakpoint)
 
 	return (
 		<article className="product-card">
