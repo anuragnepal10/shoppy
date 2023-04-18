@@ -8,8 +8,12 @@ const ProductContainer = ({ products }) => {
 	return (
 		<section className="product-container">
 			{products.map((product) => (
-				<Link className="product-card-link" to={`/product/${product.id}`}>
-					<ProductCard key={product.id} product={product} />
+				<Link
+					key={product.id}
+					className="product-card-link"
+					to={`/product/${product.id}`}
+				>
+					<ProductCard product={product} />
 				</Link>
 			))}
 		</section>
