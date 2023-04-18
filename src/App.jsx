@@ -5,8 +5,17 @@ import ProductPage from './pages/ProductPage/ProductPage'
 import CartPage from './pages/CartPage/CartPage'
 import AboutPage from './pages/AboutPage/AboutPage'
 import ErrorPage from './pages/ErrorPage/ErrorPage'
+import { useDispatch } from 'react-redux'
+import { fetchProducts } from './features/product/productSlice'
+import { useEffect } from 'react'
 
 function App() {
+	const dispatch = useDispatch()
+
+	useEffect(() => {
+		dispatch(fetchProducts())
+	}, [])
+
 	const router = createHashRouter([
 		{
 			path: '/',

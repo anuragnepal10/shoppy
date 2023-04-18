@@ -1,26 +1,16 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './ProductContainer.scss'
 import ProductCard from '../ProductCard/ProductCard'
-import { fetchProducts } from '../productSlice'
-import { useSelector, useDispatch } from 'react-redux'
-import ErrorMessage from '../../../pages/ErrorPage/ErrorMessage'
 
-const ProductContainer = () => {
-	const dispatch = useDispatch()
-	const { isLoading, products, error } = useSelector((state) => state.product)
+import { Link } from 'react-router-dom'
 
-	useEffect(() => {
-		dispatch(fetchProducts())
-	}, [])
-
-	return isLoading ? (
-		<ErrorMessage message="Loading..." />
-	) : error ? (
-		<ErrorMessage message={error} />
-	) : (
+const ProductContainer = ({ products }) => {
+	return (
 		<section className="product-container">
 			{products.map((product) => (
-				<ProductCard key={product.id} product={product} />
+				<Link className="product-card-link" to={`/product/${product.id}`}>
+					<ProductCard key={product.id} product={product} />
+				</Link>
 			))}
 		</section>
 	)

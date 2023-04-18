@@ -3,26 +3,30 @@ import './ProductDetailContainer.scss'
 import { FaStar, FaShoppingCart } from 'react-icons/fa'
 import QuantityToggler from '../../quantity/QuantityToggler/QuantityToggler'
 
-const ProductDetailContainer = () => {
+const ProductDetailContainer = ({ product }) => {
+	const { title, description, rating, price, image } = product
 	return (
 		<section className="product-detail-container">
-			<div className="product-detail-image-container"></div>
+			<div className="product-detail-image-container">
+				<img
+					src={image}
+					alt=""
+					className="product-detail-image product-image"
+				/>
+			</div>
 			<div className="container">
 				<div className="product-detail-info-container">
-					<h2 className="product-detail-title">Lorem ipsum dolor sit amet.</h2>
-					<p className="product-detail-description">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident,
-						quibusdam. Distinctio eaque modi nam veritatis pariatur at adipisci
-						sunt deserunt.
-					</p>
+					<h2 className="product-detail-title">{title}</h2>
+					<p className="product-detail-description">{description}</p>
 					<p className="product-detail-rating">
 						<span className="rating">
-							4.0 <FaStar className="star-icon" />
+							{rating.rate} <FaStar className="star-icon" />
 						</span>
-						<span className="reviews">132 reviews</span>
+						<span className="reviews">{rating.count} reviews</span>
 					</p>
 					<p className="product-detail-price">
-						900<span>$</span>
+						{price}
+						<span>$</span>
 					</p>
 				</div>
 				<hr />

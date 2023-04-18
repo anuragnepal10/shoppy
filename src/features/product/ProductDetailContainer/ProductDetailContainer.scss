@@ -33,6 +33,19 @@
 			width: 100px;
 			height: 100px;
 		}
+
+		.product-detail-image {
+			cursor: pointer;
+			padding: 2rem;
+			transition: tem.$transition;
+			transition-property: scale;
+
+			&:hover {
+				@media (hover: hover) {
+					scale: 1.05;
+				}
+			}
+		}
 	}
 	.container {
 		display: flex;

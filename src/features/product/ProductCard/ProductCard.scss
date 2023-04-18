@@ -2,6 +2,23 @@
 @use '/src/common/color.scss' as clr;
 @use '/src/common/breakpoint.scss' as b;
 
+.product-card-link:hover,
+.product-card-link:focus {
+	@media (hover: hover) {
+		.product-card {
+			border-color: clr.$primary;
+
+			.product-card-image-container {
+				border-color: clr.$primary;
+
+				.product-card-image {
+					scale: 1.1;
+				}
+			}
+		}
+	}
+}
+
 .product-card {
 	border: tem.$border;
 	display: flex;
@@ -21,10 +38,10 @@
 	}
 
 	.product-card-image-container {
-		padding: 1rem;
 		border-bottom: tem.$border;
 		width: 100%;
 		height: 250px;
+		overflow: hidden;
 
 		@media (max-width: b.$tablet-large) {
 			height: 175px;
@@ -39,9 +56,8 @@
 		}
 
 		.product-card-image {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
+			transition: tem.$transition;
+			transition-property: scale;
 		}
 	}
 

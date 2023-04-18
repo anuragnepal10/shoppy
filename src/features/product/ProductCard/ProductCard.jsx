@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './ProductCard.scss'
 import { FaStar } from 'react-icons/fa'
 const ProductCard = ({ product }) => {
 	const { title, price, image, rating } = product
-	const breakpoint = 1540
 
 	return (
 		<article className="product-card">
 			<div className="product-card-image-container">
-				<img src={image} alt="" className="product-card-image" />
+				<img src={image} alt="" className="product-card-image product-image" />
 			</div>
 			<div className="product-card-info-container">
 				<h3 className="product-card-title">{title}</h3>
