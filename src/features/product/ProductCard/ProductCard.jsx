@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
 				<img src={image} alt="" className="product-card-image" />
 			</div>
 			<div className="product-card-info-container">
-				<h3 className="product-card-title">{truncatedTitle}</h3>
+				<h3 className="product-card-title">{title}</h3>
 				<div>
 					<p className="product-card-price">
 						{price}
