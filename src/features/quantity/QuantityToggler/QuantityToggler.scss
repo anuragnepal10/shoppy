@@ -18,8 +18,9 @@
 		background-color: clr.$neutral-inverted;
 	}
 
-	.btn.disabled {
+	.btn:disabled {
 		cursor: not-allowed;
+		color: clr.$balance;
 	}
 	input {
 		color: inherit;
