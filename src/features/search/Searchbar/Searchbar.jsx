@@ -1,8 +1,11 @@
 import React, { useRef } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import './Searchbar.scss'
+import { useDispatch } from 'react-redux'
+import { setSearch } from '../searchSlice'
 
-const Searchbar = () => {
+const Searchbar = ({ searchValue }) => {
+	const dispatch = useDispatch()
 	const ref = useRef(0)
 	const handleFocus = () => {
 		ref.current.classList.add('active')
@@ -12,12 +15,7 @@ const Searchbar = () => {
 	}
 
 	return (
-		<form
-			action=""
-			className="search-bar"
-			onSubmit={(e) => e.preventDefault()}
-			ref={ref}
-		>
+		<form className="search-bar" onSubmit={(e) => e.preventDefault()} ref={ref}>
 			<div className="search-icon-holder">
 				<FaSearch className="search-icon" />
 			</div>
@@ -27,6 +25,8 @@ const Searchbar = () => {
 				className="search-bar-input"
 				onFocus={handleFocus}
 				onBlur={handleBlur}
+				value={searchValue}
+				onChange={(e) => dispatch(setSearch(e.target.value))}
 			/>
 		</form>
 	)
