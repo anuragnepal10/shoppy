@@ -2,6 +2,10 @@
 @use '/src/common/color.scss' as clr;
 @use '/src/common/breakpoint.scss' as b;
 
+.product-card-link {
+	display: flex;
+}
+
 .product-card-link:hover,
 .product-card-link:focus {
 	@media (hover: hover) {
