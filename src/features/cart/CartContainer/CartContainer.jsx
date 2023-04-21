@@ -30,7 +30,7 @@ const CartContainer = ({ products, cartItems }) => {
 							)
 
 							return (
-								<tr>
+								<tr key={item.id}>
 									<td>
 										<CartCard product={product} id={item.id} />
 									</td>

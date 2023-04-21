@@ -128,8 +128,7 @@
 				border-color: clr.$primary;
 				transition: tem.$transition;
 
-				&:hover,
-				&:focus {
+				&:hover {
 					@media (hover: hover) {
 						color: clr.$neutral-inverted;
 						background-color: clr.$primary;

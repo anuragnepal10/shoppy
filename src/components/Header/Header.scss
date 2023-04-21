@@ -39,8 +39,7 @@ header {
 				border: none;
 			}
 
-			&:hover,
-			&:focus {
+			&:hover {
 				@media (hover: hover) {
 					background-color: clr.$balance;
 				}
