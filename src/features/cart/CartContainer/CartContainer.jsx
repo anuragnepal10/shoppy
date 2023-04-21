@@ -2,10 +2,16 @@ import React from 'react'
 import './CartContainer.scss'
 import CartCard from '../CartCard/CartCard'
 
-const CartContainer = () => {
+const CartContainer = ({ products, cartItems }) => {
+	let totalPrice = 0
+	cartItems.forEach((item) => {
+		const product = products.find((product) => product.id === item.productId)
+		totalPrice = totalPrice + product.price * item.quantity
+	})
+
 	return (
 		<section className="cart-card-container">
-			<p className="total-price">Total $670</p>
+			<p className="total-price">Total ${totalPrice.toFixed(2)}</p>
 			<table>
 				<thead>
 					<tr>
@@ -15,13 +21,24 @@ const CartContainer = () => {
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>
-							<CartCard />
-						</td>
-						<td>3</td>
-						<td>$290</td>
-					</tr>
+					{cartItems
+						.slice()
+						.reverse()
+						.map((item) => {
+							const product = products.find(
+								(product) => product.id === item.productId
+							)
+
+							return (
+								<tr>
+									<td>
+										<CartCard product={product} id={item.id} />
+									</td>
+									<td>{item.quantity}</td>
+									<td>${(product.price * item.quantity).toFixed(2)}</td>
+								</tr>
+							)
+						})}
 				</tbody>
 			</table>
 		</section>

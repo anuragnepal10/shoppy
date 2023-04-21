@@ -14,8 +14,11 @@ const quantitySlice = createSlice({
 		decrement: (state) => {
 			state.value--
 		},
+		reset: (state) => {
+			state.value = 1
+		},
 	},
 })
 
 export const quantityReducer = quantitySlice.reducer
-export const { increment, decrement } = quantitySlice.actions
+export const { increment, decrement, reset } = quantitySlice.actions

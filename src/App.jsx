@@ -7,6 +7,7 @@ import AboutPage from './pages/AboutPage/AboutPage'
 import ErrorPage from './pages/ErrorPage/ErrorPage'
 import { useDispatch } from 'react-redux'
 import { fetchProducts } from './features/product/productSlice'
+import { fetchCartItems } from './features/cart/cartSlice'
 import { useEffect } from 'react'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 
 	useEffect(() => {
 		dispatch(fetchProducts())
+		dispatch(fetchCartItems())
 	}, [])
 
 	const router = createHashRouter([

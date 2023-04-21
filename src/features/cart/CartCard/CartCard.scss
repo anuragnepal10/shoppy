@@ -1,4 +1,5 @@
 @use '/src/common/color.scss' as clr;
+@use '/src/common/template.scss' as tem;
 @use '/src/common/breakpoint.scss' as b;
 
 .cart-card {
@@ -11,10 +12,10 @@
 	}
 
 	.cart-card-image-container {
-		background-color: red;
 		flex-shrink: 0;
 		width: 200px;
 		height: 200px;
+		border: tem.$border;
 
 		@media (max-width: b.$tablet) {
 			width: 150px;
@@ -28,12 +29,27 @@
 			width: 100px;
 			height: 100px;
 		}
+
+		.cart-card-image {
+			@media (max-width: b.$tablet) {
+				padding: 0.5rem;
+			}
+			@media (max-width: b.$tablet-mini) {
+				padding: 0.25rem;
+			}
+		}
 	}
 	.cart-card-info-container {
 		display: flex;
 		flex-direction: column;
 
 		.cart-card-title {
+			width: 100%;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+
 			@media (max-width: b.$phone) {
 				font-size: 0.875rem;
 			}

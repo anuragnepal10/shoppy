@@ -31,6 +31,7 @@ const QuantityToggler = () => {
 				className="btn"
 				onClick={handleDecrement}
 				disabled={isDisabled('dec')}
+				type="button"
 			>
 				-
 			</button>
@@ -39,6 +40,7 @@ const QuantityToggler = () => {
 				className="btn"
 				onClick={handleIncrement}
 				disabled={isDisabled('inc')}
+				type="button"
 			>
 				+
 			</button>

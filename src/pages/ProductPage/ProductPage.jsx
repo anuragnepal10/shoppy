@@ -10,7 +10,6 @@ const ProductPage = () => {
 
 	const { id } = useParams()
 	const { isLoading, products, error } = useSelector((state) => state.product)
-	const product = products.find((product) => product.id.toString() === id)
 	const loadingProduct = {
 		title: 'Product Title is Loading...',
 		description: 'Product Description is Loading...',
