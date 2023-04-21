@@ -11,8 +11,10 @@ const HomePage = () => {
 	const { isLoading, products, error } = useSelector((state) => state.product)
 	const searchValue = useSelector((state) => state.search.value)
 
-	const searchItems = products.filter((product) =>
-		product.title.toLowerCase().includes(searchValue.toLowerCase())
+	const searchItems = products.filter(
+		(product) =>
+			product.title.toLowerCase().includes(searchValue.toLowerCase()) ||
+			product.description.toLowerCase().includes(searchValue.toLowerCase())
 	)
 
 	return isLoading ? (
